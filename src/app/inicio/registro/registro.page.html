@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="divLogin">
+      <h1>Registro</h1>
+
+      <ion-row >
+        <ion-col size="12">
+            <ion-input   placeholder="Nombre" ></ion-input>
+        </ion-col>
+        <ion-col size="12">
+            <ion-input   type="text" required [(ngModel)]="userData.last_name"  placeholder="Apellido"></ion-input>
+        </ion-col>
+
+        <ion-col size="12">
+            <ion-input   type="email" required [(ngModel)]="userData.email"  placeholder="Email"></ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-input   type="email" required [(ngModel)]="email2"  placeholder="Reingresar Email"></ion-input>
+      </ion-col>
+        <ion-col size="12">
+            <ion-input   type="password"  required [(ngModel)]="userData.password" placeholder="Contraseña"></ion-input>
+        </ion-col>
+        <ion-col size="12">
+            <ion-input   type="password"  required [(ngModel)]="userData.password2" placeholder="Reingresar contraseña"></ion-input>
+        </ion-col>
+      </ion-row>
+      
+    </div>
+    <br>
+    <ion-col size="12" >
+      <ion-button  expand="block" class="btnlogin" (click)="register()" >Crear usuario </ion-button>
+    </ion-col>
+  </ion-content>
+  
